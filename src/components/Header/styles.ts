@@ -2,11 +2,8 @@ import styled from "styled-components";
 
 interface IProps {
   open: boolean;
+  overflow?: boolean;
 }
-
-export const Container = styled.header`
-  width: 100%;
-`;
 
 export const NavContainer = styled.div`
   display: flex;
@@ -30,7 +27,7 @@ export const NavLinks = styled.ul<IProps>`
     padding-top: 10px;
     width: 100%;
     top: 70px;
-
+    background-color: #ffffff;
     left: ${({ open }) => (open ? "-100%" : 0)};
     opacity: 1;
     height: 90vh;
