@@ -40,7 +40,7 @@ export const BoderDiv = styled.hr`
 export const Description = styled.p`
   font-family: "MontSerrat";
   font-weight: 400;
-  color: #000000;
+  color: #969696;
   max-width: 381px;
   width: 100%;
   margin-top: 28px;
