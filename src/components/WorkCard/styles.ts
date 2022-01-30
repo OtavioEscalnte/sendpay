@@ -12,11 +12,14 @@ export const Container = styled.div`
   @media screen and (max-width: 800px) {
     margin-top: 30px;
   }
+  @media screen and (max-width: 375px) {
+    margin-bottom: 30px;
+  }
 `;
 
 export const Image = styled.img`
-  width: 207px;
-  height: 207px;
+  max-width: 100%;
+  height: auto;
 `;
 
 export const CardTitle = styled.h3`
@@ -24,6 +27,10 @@ export const CardTitle = styled.h3`
   font-family: "MontSerrat";
   font-weight: 600;
   font-size: 1.6rem;
+
+  @media screen and (max-width: 375px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const CardDescription = styled.p`

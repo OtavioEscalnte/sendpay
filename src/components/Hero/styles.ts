@@ -21,11 +21,14 @@ export const Container = styled.div`
 export const Title = styled.h1`
   font-family: "MontSerrat";
   font-weight: 600;
-  font-size: 2.76rem;
+  font-size: 2.75rem;
   max-width: 423px;
   width: 100%;
-  @media screen and(max-width:800px) {
+  @media screen and (max-width: 800px) {
     background-image: none;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 2rem;
   }
 `;
 

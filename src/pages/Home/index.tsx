@@ -15,7 +15,9 @@ import {
   WorkDiv,
   WorkDiscription,
   WorkCardsContainer,
+  RealContainer,
 } from "./styles";
+import { Realtime } from "../../components/Realtime";
 
 export function Home() {
   return (
@@ -48,6 +50,9 @@ export function Home() {
           />
         </WorkCardsContainer>
       </WorksContainer>
+      <RealContainer>
+        <Realtime />
+      </RealContainer>
     </Container>
   );
 }
