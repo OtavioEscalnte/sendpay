@@ -15,7 +15,7 @@ export const WorksContainer = styled.div`
   }
 `;
 
-export const TitleWork = styled.h2`
+export const Title = styled.h2`
   text-align: center;
   font-family: "MontSerrat";
   font-weight: 600;
@@ -26,7 +26,7 @@ export const TitleWork = styled.h2`
   }
 `;
 
-export const WorkDiv = styled.hr`
+export const Divider = styled.hr`
   width: 50px;
   height: 3px;
   border: none;
@@ -75,5 +75,48 @@ export const RealContainer = styled.div`
   }
   @media screen and (max-width: 375px) {
     margin-top: 70px;
+  }
+`;
+
+export const ServicesContainer = styled.div`
+  max-width: 1132px;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url(${rectangleImg});
+  background-size: 1100px 850px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  @media screen and (max-width: 990px) {
+    margin-top: 200px;
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 800px) {
+    background-image: none;
+  }
+`;
+
+export const ServicesDescription = styled.p`
+  text-align: center;
+  margin: 0 auto;
+  font-family: "MontSerrat";
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #969696;
+  max-width: 587px;
+  width: 100%;
+  @media screen and (max-width: 375px) {
+    font-size: 1rem;
+  }
+`;
+
+export const ServiceCardContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
   }
 `;
