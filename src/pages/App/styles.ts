@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import rectangleImg from "../../assets/rectangle.png";
+import circleImg from "../../assets/circle.png";
 
 export const Container = styled.div`
   height: 100vh;
@@ -85,8 +86,8 @@ export const ServicesContainer = styled.div`
   background-image: url(${rectangleImg});
   background-size: 1100px 850px;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 600px;
+  background-position: center top;
+  padding: 100px 0px 200px;
   @media screen and (max-width: 990px) {
     margin-top: 200px;
     padding: 0 20px;
@@ -106,7 +107,7 @@ export const ServicesDescription = styled.p`
   max-width: 587px;
   width: 100%;
   @media screen and (max-width: 375px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -118,5 +119,19 @@ export const ServiceCardContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
+  }
+`;
+
+export const AboutUsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  height: 440px;
+  width: 100%;
+  background-color: #6c63ff;
+  background-image: url(${circleImg});
+  background-repeat: no-repeat;
+  background-position: center top;
+  @media screen and (max-width: 990px) {
+    margin-top: 40px;
   }
 `;

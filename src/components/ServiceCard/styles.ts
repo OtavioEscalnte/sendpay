@@ -36,6 +36,6 @@ export const Description = styled.p`
   max-width: 403px;
   width: 100%;
   @media screen and (max-width: 375px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 `;
