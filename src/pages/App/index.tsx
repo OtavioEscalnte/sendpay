@@ -20,9 +20,12 @@ import {
   ServicesContainer,
   ServicesDescription,
   ServiceCardContainer,
+  AboutUsContainer,
 } from "./styles";
 import { Realtime } from "../../components/Realtime";
 import { ServiceCard } from "../../components/ServiceCard";
+import { AboutUs } from "../../components/AboutUs";
+import { Footer } from "../../components/Footer";
 
 export function App() {
   return (
@@ -90,6 +93,10 @@ export function App() {
           />
         </ServiceCardContainer>
       </ServicesContainer>
+      <AboutUsContainer>
+        <AboutUs />
+      </AboutUsContainer>
+      <Footer />
     </Container>
   );
 }
