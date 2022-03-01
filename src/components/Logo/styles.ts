@@ -6,10 +6,10 @@ export const Container = styled.div`
 `;
 
 export const Brand = styled.img``;
-export const LogoTitle = styled.h4`
-  font-family: "Montserrat";
-  font-weight: 600;
+export const LogoTitle = styled.h3`
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.semiBold};
   font-size: 1.5rem;
-  color: #6c63ff;
+  color: ${({ theme }) => theme.colors.background};
   margin-left: 15px;
 `;

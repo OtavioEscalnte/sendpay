@@ -19,9 +19,10 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: "MontSerrat";
-  font-weight: 600;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.semiBold};
   font-size: 2.75rem;
+  color: ${({ theme }) => theme.colors.dark};
   max-width: 423px;
   width: 100%;
   @media screen and (max-width: 800px) {
@@ -37,13 +38,13 @@ export const BoderDiv = styled.hr`
   height: 3px;
   margin-top: 23px;
   border: none;
-  background-color: #b7b3b3;
+  background-color: ${({ theme }) => theme.colors.dark_light};
 `;
 
 export const Description = styled.p`
-  font-family: "MontSerrat";
-  font-weight: 400;
-  color: #969696;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.regular};
+  color: ${({ theme }) => theme.colors.text_gray};
   max-width: 381px;
   width: 100%;
   margin-top: 28px;

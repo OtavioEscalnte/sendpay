@@ -30,9 +30,10 @@ export const RealContent = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-family: "MontSerrat";
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.semiBold};
   font-size: 2.5rem;
-  font-weight: 600;
+  color: ${({ theme }) => theme.colors.dark};
   max-width: 423px;
   width: 100%;
   @media screen and (max-width: 375px) {
@@ -45,14 +46,14 @@ export const RealDiv = styled.hr`
   height: 3px;
   margin-top: 23px;
   border: none;
-  background-color: #b7b3b3;
+  background-color: ${({ theme }) => theme.colors.dark_light};
 `;
 
 export const Description = styled.p`
-  font-family: "MontSerrat";
+  font-family: ${({ theme }) => theme.fonts.primary};
   font-size: 1.2rem;
-  font-weight: 400;
-  color: #969696;
+  font-weight: ${({ theme }) => theme.weight.regular};
+  color: ${({ theme }) => theme.colors.text_gray};
   max-width: 400px;
   width: 100%;
   margin-top: 36px;
@@ -62,12 +63,12 @@ export const Description = styled.p`
 `;
 
 export const TextLink = styled.p`
-  font-family: "MontSerrat";
+  font-family: ${({ theme }) => theme.fonts.primary};
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: ${({ theme }) => theme.weight.semiBold};
   margin-top: 17px;
 
-  color: #6c63ff;
+  color: ${({ theme }) => theme.colors.background};
 
   cursor: pointer;
 

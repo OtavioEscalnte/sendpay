@@ -18,8 +18,8 @@ export const WorksContainer = styled.div`
 
 export const Title = styled.h2`
   text-align: center;
-  font-family: "MontSerrat";
-  font-weight: 600;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.semiBold};
   font-size: 2.75rem;
 
   @media screen and (max-width: 375px) {
@@ -31,17 +31,17 @@ export const Divider = styled.hr`
   width: 50px;
   height: 3px;
   border: none;
-  background-color: #b7b3b3;
+  background-color: ${({ theme }) => theme.colors.dark_light};
   margin: 20px auto 20px;
 `;
 
 export const WorkDiscription = styled.p`
   text-align: center;
   margin: 0 auto;
-  font-family: "MontSerrat";
+  font-family: ${({ theme }) => theme.fonts.primary};
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #969696;
+  font-weight: ${({ theme }) => theme.weight.semiBold};
+  color: ${({ theme }) => theme.colors.text_gray};
   width: 100%;
   max-width: 587px;
   @media screen and (max-width: 375px) {
@@ -67,12 +67,12 @@ export const WorkCardsContainer = styled.div`
 export const RealContainer = styled.div`
   width: 100%;
   height: 580px;
-  background-color: #fffcfc;
+  background-color: ${({ theme }) => theme.colors.background_secundary};
   padding: 109px 0px;
   margin-top: 165px;
 
   @media screen and (max-width: 990px) {
-    background-color: #ffffff;
+    background-color: ${({ theme }) => theme.colors.light};
   }
   @media screen and (max-width: 375px) {
     margin-top: 70px;
@@ -100,10 +100,10 @@ export const ServicesContainer = styled.div`
 export const ServicesDescription = styled.p`
   text-align: center;
   margin: 0 auto;
-  font-family: "MontSerrat";
+  font-family: ${({ theme }) => theme.fonts.primary};
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #969696;
+  font-weight: ${({ theme }) => theme.weight.semiBold};
+  color: ${({ theme }) => theme.colors.text_gray};
   max-width: 587px;
   width: 100%;
   @media screen and (max-width: 375px) {
@@ -127,7 +127,7 @@ export const AboutUsContainer = styled.div`
   align-items: center;
   height: 440px;
   width: 100%;
-  background-color: #6c63ff;
+  background-color: ${({ theme }) => theme.colors.background};
   background-image: url(${circleImg});
   background-repeat: no-repeat;
   background-position: center top;

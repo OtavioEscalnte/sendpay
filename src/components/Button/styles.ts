@@ -14,9 +14,9 @@ export const Btn = styled.div<buttonProps>`
   justify-content: center;
   width: ${({ width }) => (width ? width : 106)}px;
   height: ${({ height }) => (height ? height : 40)}px;
-  background-color: ${({ backgroundColor }) =>
-    backgroundColor ? backgroundColor : "#ffffff"};
-  border: 2px solid #b7b3b3;
+  background-color: ${({ backgroundColor, theme }) =>
+    backgroundColor ? backgroundColor : theme.colors.light};
+  border: 2px solid ${({ theme }) => theme.colors.dark_light};
 
   cursor: pointer;
   &:active {
@@ -28,8 +28,9 @@ export const Btn = styled.div<buttonProps>`
 `;
 
 export const Title = styled.h4<buttonProps>`
-  color: ${({ color }) => (color ? color : "#000000")};
+  color: ${({ color, theme }) => (color ? color : theme.colors.dark)};
   font-family: "Montserrat";
-  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 700)};
+  font-weight: ${({ fontWeight, theme }) =>
+    fontWeight ? fontWeight : theme.weight.bold};
   font-size: 1rem;
 `;

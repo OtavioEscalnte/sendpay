@@ -24,8 +24,8 @@ export const ContainerLogo = styled.div`
 `;
 
 export const Description = styled.p`
-  font-family: "MontSerrat";
-  font-weight: 600;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.semiBold};
   font-size: 1.1rem;
   margin-top: 30px;
   max-width: 317px;
@@ -44,8 +44,8 @@ export const ContainerContacts = styled.div`
 `;
 
 export const SocialTitle = styled.h3`
-  font-family: "MontSerrat";
-  font-weight: 800;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.extraBold};
   font-size: 1.3rem;
   @media screen and (max-width: 1024px) {
     text-align: center;
@@ -71,9 +71,10 @@ export const IconContainer = styled.div`
 `;
 
 export const TitleIcon = styled.p`
-  font-family: "MontSerrat";
-  font-weight: 500;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.medium};
   font-size: 1.3rem;
+  color: ${({ theme }) => theme.colors.dark};
   margin-left: 10px;
   @media screen and (max-width: 768px) {
     width: 150px;
