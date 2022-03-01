@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { GrMenu, GrClose } from "react-icons/gr";
+import { useTheme } from "styled-components";
+
 import { Button } from "../Button";
 import { Logo } from "../Logo";
 import {
@@ -11,6 +13,7 @@ import {
 } from "./styles";
 
 export function Header() {
+  const theme = useTheme();
   const [active, setActive] = useState(false);
 
   function handleOpen() {
@@ -31,8 +34,12 @@ export function Header() {
       </NavLinks>
 
       <ContainerButtons>
-        <Button background="#ffffffff" title="Sign in" />
-        <Button background="#6c63ff" title="Register" color="#ffffffff" />
+        <Button background={theme.colors.light} title="Sign in" />
+        <Button
+          background={theme.colors.background}
+          title="Register"
+          color={theme.colors.light}
+        />
       </ContainerButtons>
       <MobileIcon>
         {!active ? (

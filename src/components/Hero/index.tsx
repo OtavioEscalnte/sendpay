@@ -1,5 +1,8 @@
 import React from "react";
+import { useTheme } from "styled-components";
+
 import { Button } from "../Button";
+
 import {
   Container,
   Title,
@@ -9,6 +12,8 @@ import {
 } from "./styles";
 
 export function Hero() {
+  const theme = useTheme();
+
   return (
     <Container>
       <Title>Sending Money is Easier than before</Title>
@@ -22,15 +27,15 @@ export function Hero() {
         <Button
           title="Register"
           fontWeight={500}
-          color="#ffffff"
-          background="#6C63FF"
+          color={theme.colors.light}
+          background={theme.colors.background}
           height={50}
           width={146}
         />
         <Button
           title="learn more"
           fontWeight={500}
-          background="#FFFFFF"
+          background={theme.colors.light}
           height={50}
           width={125}
         />

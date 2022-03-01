@@ -24,8 +24,8 @@ export const Image = styled.img`
 
 export const CardTitle = styled.h3`
   margin: 56px 0 11px;
-  font-family: "MontSerrat";
-  font-weight: 600;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.semiBold};
   font-size: 1.6rem;
 
   @media screen and (max-width: 375px) {
@@ -34,11 +34,11 @@ export const CardTitle = styled.h3`
 `;
 
 export const CardDescription = styled.p`
-  font-family: "MontSerrat";
-  font-weight: 600;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.semiBold};
   font-size: 0.8rem;
   text-align: center;
-  color: #969696;
+  color: ${({ theme }) => theme.colors.text_gray};
   max-width: 337px;
   width: 100%;
 `;

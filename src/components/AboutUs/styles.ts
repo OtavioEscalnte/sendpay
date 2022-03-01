@@ -34,9 +34,9 @@ export const SeeAll = styled.div<Props>`
 export const Title = styled.h3`
   font-family: "MontSerrat";
   font-size: 2rem;
-  font-style: italic;
-  font-weight: lighter;
-  color: #ffffff;
+  font-style: ${({ theme }) => theme.fontStyle.italic};
+  font-weight: ${({ theme }) => theme.weight.fontLight};
+  color: ${({ theme }) => theme.colors.light};
   @media screen and (max-width: 375px) {
     font-size: 1.8rem;
   }
@@ -46,7 +46,7 @@ export const Divider = styled.hr`
   width: 50px;
   height: 2px;
   border: none;
-  background-color: #ffffff;
+  background-color: ${({ theme }) => theme.colors.light};
   margin: 20px 0px;
   @media screen and (max-width: 1024px) {
     max-width: 100%;
@@ -64,10 +64,10 @@ export const ContentIcon = styled.div`
 `;
 
 export const SubTitle = styled.p`
-  font-family: "MontSerrat";
+  font-family: ${({ theme }) => theme.fonts.primary};
   font-size: 1.3rem;
-  font-weight: 400;
-  color: #ffffff;
+  font-weight: ${({ theme }) => theme.weight.regular};
+  color: ${({ theme }) => theme.colors.light};
   transition: 0.5s;
   &:hover {
     transition: 0.5s;
@@ -80,7 +80,7 @@ export const Icon = styled.div`
   align-items: center;
   justify-content: center;
   margin-left: 10px;
-  background-color: #ffffff;
+  background-color: ${({ theme }) => theme.colors.light};
   height: 36px;
   width: 36px;
   border-radius: 50%;
@@ -93,7 +93,7 @@ export const ArrowLeftContainer = styled.div<Props>`
 `;
 
 export const ArrowLeft = styled(AiOutlineArrowLeft)`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.light};
   font-size: 2.2rem;
   transition: 0.3s;
   animation: spin 0.5s infinite alternate linear;
@@ -108,20 +108,4 @@ export const ContainerSayingCard = styled.div<Props>`
   display: flex;
   margin-right: ${({ display }) => (display ? 0 : -500)}px;
   margin-left: 50px;
-
-  /*
-
-  ::-webkit-scrollbar {
-    background-color: "tranparent";
-    height: 10px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.1);
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.5);
-    }
-    border-radius: 10px;
-  }
-  */
 `;

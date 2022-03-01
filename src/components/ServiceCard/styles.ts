@@ -19,19 +19,20 @@ export const ContentContainer = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-family: "MontSerrat";
-  font-size: 1.8rem;
+  font-family: ${({ theme }) => theme.fonts.primary};
   font-weight: 600;
+  font-size: 1.8rem;
+  color: ${({ theme }) => theme.colors.dark};
   @media screen and (max-width: 375px) {
     font-size: 1.6rem;
   }
 `;
 
 export const Description = styled.p`
-  font-family: "MontSerrat";
+  font-family: ${({ theme }) => theme.fonts.primary};
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #b7b3b3;
+  font-weight: ${({ theme }) => theme.weight.semiBold};
+  color: ${({ theme }) => theme.colors.dark_light};
   margin-top: 20px;
   max-width: 403px;
   width: 100%;

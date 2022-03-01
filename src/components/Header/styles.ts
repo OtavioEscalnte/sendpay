@@ -27,7 +27,7 @@ export const NavLinks = styled.ul<IProps>`
     padding-top: 10px;
     width: 100%;
     top: 70px;
-    background-color: #ffffff;
+    background-color: ${({ theme }) => theme.colors.light};
     left: ${({ open }) => (open ? "-100%" : 0)};
     opacity: 1;
     height: 90vh;
@@ -35,8 +35,8 @@ export const NavLinks = styled.ul<IProps>`
   }
 `;
 export const LinkItem = styled.li`
-  font-family: "Montserrat";
-  font-weight: 700;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: ${({ theme }) => theme.weight.bold};
   font-size: 1rem;
   margin: 0 20px;
 
@@ -51,12 +51,12 @@ export const LinkItem = styled.li`
   }
 
   @media screen and (max-width: 1024px) {
-    color: #ffffff;
+    color: ${({ theme }) => theme.colors.light};
     margin-bottom: 20px;
     text-align: center;
     display: block;
     padding: 10px 0px;
-    background-color: #6c63ff;
+    background-color: ${({ theme }) => theme.colors.background};
     &:nth-child(1) {
       display: block;
     }
@@ -64,7 +64,7 @@ export const LinkItem = styled.li`
       display: block;
     }
     &:hover {
-      background-color: black;
+      background-color: ${({ theme }) => theme.colors.dark};
       transition: 0.5s;
     }
   }
